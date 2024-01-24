@@ -18,7 +18,7 @@ export class ReactAdapter implements TemplateAdapter {
 
   public compile(mail: any, callback: any, options: MailerOptions): void {
     const { context, template } = mail.data;
-    const templateExt = path.extname(template) || ".js";
+    const templateExt = path.extname(template) || ".tsx";
     const templateName = path.basename(template, path.extname(template));
     const templateDir = path.isAbsolute(template)
       ? path.dirname(template)
